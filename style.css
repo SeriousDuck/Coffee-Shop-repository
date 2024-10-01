@@ -377,6 +377,7 @@ section {
 .footer-btn {
     padding: 10px 40px;
     border-radius: 0.3rem;
+    text-align: center;
     background: var(--main-color);
     color: var(--bg-color);
     font-weight: 500;
@@ -516,22 +517,35 @@ section {
 }
 
 @media (max-width: 360px) {
+    section {
+        padding: 0 4% 50px 4%;
+    }
     header {
         padding: 11px 4%;
     }
     .logo img {
         width: 45px;
     }
+    .coffee-info {
+        padding-top: 50px;
+    }
     .home-text {
         padding-top: 15px;
     }
     .home-text h1 {
         font-size: 1.4rem;
+        padding-top: 40px;
+    }
+    .search-container {
+        margin: 30px;
     }
     .about-text h2,
     .heading h2,
     .search-container h2 {
         font-size: 1.2rem;
+    }
+    .search-container h2{
+        padding: 30px 0;
     }
     .home-text p
     .about-text p {
