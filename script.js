@@ -4,6 +4,7 @@ const searchIcon = document.querySelector("#search-icon");
 searchIcon.addEventListener("click", () => {
     searchBox.classList.toggle("active");
     navbar.classList.remove("active");
+    basket.classList.remove("active");
 })
 
 
@@ -14,6 +15,7 @@ const menuIcon = document.querySelector("#menu-icon");
 menuIcon.addEventListener("click", () => {
     navbar.classList.toggle("active");
     searchBox.classList.remove("active");
+    basket.classList.remove("active");
 })
 
 
@@ -21,6 +23,7 @@ menuIcon.addEventListener("click", () => {
 window.onscroll = () => {
     navbar.classList.remove("active");
     searchBox.classList.remove("active");
+    basket.classList.remove("active");
 }
 
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Coffe</title>
 </head>
+
 <body>
     <!-- Navbar -->
     <header>
@@ -15,22 +17,33 @@
             <img src="img/logo.png" alt="">
         </a>
         <i class="bx bx-menu" id="menu-icon"></i>
-        <!-- links --> 
+        <!-- links -->
         <ul class="navbar">
-           <li><a href="#home">Home</a></li>
-           <li><a href="#about">About</a></li>
-           <li><a href="#products">product</a></li>
-           <li><a href="#customers">customers</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#products">product</a></li>
+            <li><a href="#customers">customers</a></li>
         </ul>
         <!-- Icons -->
         <div class="header-icons">
-            <i class='bx bx-cart-alt'></i>
+            <i class='bx bx-cart-alt' id="basket-icon"></i>
             <i class='bx bx-search' id="search-icon"></i>
-        </div> 
+        </div>
         <!-- Search Box -->
-         <div class="search-box">
+        <div class="search-box">
             <input type="search" name="" id="" placeholder="Search Here...">
-         </div>
+        </div>
+        <!-- Basket Box -->
+        <div class="basket-box">
+            <ul class="basket-items">
+                <li>ddddd</li>
+                <li>ddddd</li>
+                <li>ddddd</li>
+                <li>ddddd</li>
+                <li>ddddd</li>
+                <li>ddddd</li>
+            </ul>
+        </div>
     </header>
 
     <!-- Home -->
@@ -38,9 +51,9 @@
         <div class="home-text">
             <h1>Start your day <br> with coffee</h1>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                Pariatur veritatis fuga labore saepe optio cupiditate autem, 
-                atque error id nesciunt, enim quis cum ratione architecto. 
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur veritatis fuga labore saepe optio cupiditate autem,
+                atque error id nesciunt, enim quis cum ratione architecto.
                 Numquam maxime ratione eveniet?
             </p>
             <a href="" class="btn">Show Now</a>
@@ -57,21 +70,21 @@
                 <i class='bx bxs-coffee'></i>
                 <h4>Awesomae Aroma</h4>
                 <p>
-                    The coffee is brewed by first roasting the green coffee beeans 
+                    The coffee is brewed by first roasting the green coffee beeans
                 </p>
             </div>
             <div class="coffee-info-box">
                 <i class='bx bxs-certification'></i>
                 <h4>High Quality</h4>
                 <p>
-                    The coffee is brewed by first roasting the green coffee beeans 
+                    The coffee is brewed by first roasting the green coffee beeans
                 </p>
             </div>
             <div class="coffee-info-box">
                 <i class='bx bxs-coffee-bean'></i>
                 <h4>Pure Grades</h4>
                 <p>
-                    The coffee is brewed by first roasting the green coffee beeans 
+                    The coffee is brewed by first roasting the green coffee beeans
                 </p>
             </div>
             <div class="coffee-info-box">
@@ -93,36 +106,36 @@
             <div class="about-text">
                 <h2>Our Story</h2>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Veniam quis rem vel quod, excepturi, voluptatem, 
-                    quisquam blanditiis rerum ad fugit illo reprehenderit ut! 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veniam quis rem vel quod, excepturi, voluptatem,
+                    quisquam blanditiis rerum ad fugit illo reprehenderit ut!
                     Ex reprehenderit accusamus reiciendis dolore placeat ad?
                 </p>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Veniam quis rem vel quod, excepturi, voluptatem, 
-                    quisquam blanditiis rerum ad fugit illo reprehenderit ut! 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veniam quis rem vel quod, excepturi, voluptatem,
+                    quisquam blanditiis rerum ad fugit illo reprehenderit ut!
                     Ex reprehenderit accusamus reiciendis dolore placeat ad?
                 </p>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                    Veniam quis rem vel quod, excepturi, voluptatem, 
-                    quisquam blanditiis rerum ad fugit illo reprehenderit ut! 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Veniam quis rem vel quod, excepturi, voluptatem,
+                    quisquam blanditiis rerum ad fugit illo reprehenderit ut!
                     Ex reprehenderit accusamus reiciendis dolore placeat ad?
                 </p>
             </div>
             <div class="about-btn">
                 <a href="" class="btn">Read More</a>
-            </div>            
+            </div>
         </div>
     </section>
 
     <!-- Popular product -->
     <section class="products" id="products">
-       <div class="heading">
-           <h2>Our Popular Product</h2>
-       </div>
-       <!-- container -->
+        <div class="heading">
+            <h2>Our Popular Product</h2>
+        </div>
+        <!-- container -->
         <div class="products-container">
             <div class="box">
                 <img src="img/p1.png" alt="">
@@ -139,7 +152,7 @@
                     <span>$25</span>
                     <a href="#">add to cart</a>
                 </div>
-            </div>   
+            </div>
             <div class="box">
                 <img src="img/p3.png" alt="">
                 <h3>indian roastingpack</h3>
@@ -155,7 +168,7 @@
                     <span>$25</span>
                     <a href="#">add to cart</a>
                 </div>
-            </div>   
+            </div>
             <div class="box">
                 <img src="img/p5.png" alt="">
                 <h3>Americano pure grades</h3>
@@ -191,7 +204,7 @@
                     <i class='bx bxs-star-half'></i>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Facilis rerum sed veritatis molestias officiis atque illo
                     temporibus vero voluptatibus quam corrupti amet voluptate
                 </p>
@@ -207,7 +220,7 @@
                     <i class='bx bxs-star'></i>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Facilis rerum sed veritatis molestias officiis atque illo
                     temporibus vero voluptatibus quam corrupti amet voluptate
                 </p>
@@ -223,7 +236,7 @@
                     <i class='bx bxs-star'></i>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                     Facilis rerum sed veritatis molestias officiis atque illo
                     temporibus vero voluptatibus quam corrupti amet voluptate
                 </p>
@@ -248,11 +261,11 @@
                 <div class="footer-social">
                     <h4>Coffee Shop</h4>
                     <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                         Velit laborum quaerat eveniet, deserunt eligendi molestiae quidem porro optio!
                         Rem, debitis!
                     </p>
-                     <div class="social-container">                        
+                    <div class="social-container">
                         <a href="#" class="bx bxl-facebook"></a>
                         <a href="#" class="bx bxl-twitter"></a>
                         <a href="#" class="bx bxl-instagram"></a>
@@ -291,8 +304,10 @@
     </section>
 
 
-    
+
 
     <script src="/script.js"></script>
+    <script src="./basket.js"></script>
 </body>
+
 </html>

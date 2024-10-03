@@ -111,7 +111,7 @@ section {
 .search-box.active {
     top: 110%;
     box-shadow: var(--box-shadow);
-    transform: 0.2s all linear;
+    transition: 0.2s all linear;
 }
 
 .search-box input {
@@ -126,6 +126,26 @@ section {
 .search-box::placeholder {
     font-weight: 500;
     font-size: 1rem;
+}
+
+.basket-box {
+    position: absolute;
+    top: -400%;
+    width: 80%;
+    right: 70px;
+    padding: 10px;
+    background: var(--second-color);
+    color: var(--text-color);
+}
+
+.basket-box.active {
+    top: 110%;
+    box-shadow: var(--box-shadow);
+    transition: 0.2s all linear;
+}
+
+.basket-items {
+
 }
 
 .home {
@@ -495,8 +515,8 @@ section {
         background: var(--second-color);
         row-gap: 1.4rem;
         padding: 20px;
-        transform: 0.3s;
         text-align: center;
+        transition: 0.2s all linear;
     }
     .navbar a {
         color: var(--text-color);
