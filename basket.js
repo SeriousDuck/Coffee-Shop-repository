@@ -8,3 +8,12 @@ basketIcon.addEventListener("click", () => {
     navbar.classList.remove("active");
     searchBox.classList.remove("active");
 })
+
+const removeProductFromBasket = (event) => {
+    event.target.parentElemetn.parentElemetn.remove();
+    const basketListItem = document.getElementsByClassName()
+}
+
+const addToBasket = (product) => {
+
+}
