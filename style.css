@@ -147,6 +147,9 @@ section {
     box-shadow: var(--box-shadow);
     transition: 0.2s all linear;
 }
+.basket-list {
+    display: block;
+}
 
 .basket-list-item {
     display: flex;
