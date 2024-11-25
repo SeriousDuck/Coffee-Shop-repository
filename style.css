@@ -318,7 +318,7 @@ section {
     margin-top: 2rem;
 }
 
-.box {
+.card {
     position: relative;
     padding: 10px;
     display: flex;
@@ -328,7 +328,7 @@ section {
     box-shadow: var(--box-shadow);
 }
 
-.box img {
+.card img {
     height: 250px;
     width: 100%;
     object-position: center;
@@ -338,7 +338,7 @@ section {
     border-radius: 0.5rem;
 }
 
-.box h3 {
+.card h3 {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 1rem;

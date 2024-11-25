@@ -23,7 +23,6 @@ menuIcon.addEventListener("click", () => {
 window.onscroll = () => {
     navbar.classList.remove("active");
     searchBox.classList.remove("active");
-    basket.classList.remove("active");
 }
 
 
