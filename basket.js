@@ -3,61 +3,120 @@ const basket = document.querySelector(".basket-box");
 const basketIcon = document.querySelector("#basket-icon");
 const cards = document.querySelectorAll(".card");
 
+
 basketIcon.addEventListener("click", () => {
     basket.classList.toggle("active");
     searchBox.classList.remove("active");
     navbar.classList.remove("active");
-});
-
-
-cards.forEach((el, idx) => {
-    // console.log(el);
-    const img = el.childNodes[1];
-    const title = el.childNodes[3].innerText;
-    const price = el.childNodes[5].childNodes[1].innerText;
-    const addBtn = el.childNodes[5].childNodes[3];
+});   
     
-    addBtn.addEventListener("click", () => {
-        const cardStorage = localStorage.getItem("card") || "[]";        
-        const cart = JSON.parse(cardStorage);
-        const card = { img, title, price };
-        localStorage.setItem("cart", JSON.stringify([...cart, card]));
-    })
-})
+// adding content on page from DB
+const getProducts = async () => {
+    const response = await fetch("data/products.json");
+    const products = await response.json();
+    return products;
+}
 
-// const removeProductFromBasket = (event) => {
-//     // event.target.parentElemetn.parentElemetn.remove();
-//     const basketListItem = document.getElementsByClassName("basket-list-item");
-//     // if(!basketListItem.length) {
-//     //     const basketList = document.querySelector(".basket-list");
-//     //     basketList.style.display = "none";
-//     // }
-    
-//     removeBtn.addEventListener("click", () => {
-//         basketList.remove(basketListItem);
-//     })
-// }
+const renderProducts = async () => {
+    const products = await getProducts();
+    const productsContainer = document.querySelector(".products-container");
+    // get item
+    for (const item of products) {
 
-// const addProductsToBasket = () => {
-//     const addBtn = document.querySelector(".content-box > a");
-//     // create elements
-//     const listProduct = document.createElement("li");
-//     const imageProduct = document.createElement("img");
-//     const titleProduct = document.createElement("h4");
-//     const sectionPriceProduct = document.createElement("section");
-//     const priceProduct = document.createElement("span");
-//     const removeBtn = document.createElement("button");
+        // creating element
+        const card = document.createElement("div");
+        const contentBox = document.createElement("div");
+        const cardImg = document.createElement("img");
+        const cardTitle = document.createElement("h3");
+        const cardPrice = document.createElement("span");
+        const cardAddBtn = document.createElement("button");
 
-//     // adding css value
-//     listProduct.classList.add("basket-list-item");
-//     imageProduct.classList.add("basket-list-img-section > img");
-//     titleProduct.classList.add("basket-list-img-section > h4");
-//     priceProduct.classList.add("basket-list-price-section > span")
-//     removeBtn.classList.add("basket-list-quattity-section > button");
+        // adding values for elements
+        card.classList.add("card");
+        contentBox.classList.add("content-box");
+        cardImg.src = item.image;
+        cardTitle.innerText = item.title;
+        cardPrice.innerText = `${item.price}`;
+        cardAddBtn.innerText = "Add To Cart";
+        cardAddBtn.addEventListener("click", () => addToCart(item));
+        
+        // appending element in wrapper        
+        contentBox.append(cardPrice, cardAddBtn);
+        card.append(
+            cardImg, 
+            cardTitle, 
+            contentBox
+        );
+        productsContainer.append(card);
+    }
+};
 
-//     sectionPriceProduct.append(priceProduct, removeBtn);
+// delete product from cart
+const removeProductFromCart = (event) => {
+    event.target.parentElement.parentElement.remove();
+};
+    // Додати умову при якій буде перевірятися довжина basket-listі і збільшуватися 
+    // лічильник кількості товарів в корзині
+// add product in cart
+const addToCart = (product) => {
+    const basketItem = document.getElementsByClassName("basket-list-item");
+    for (const item of basketItem) {
+        if(product.id === +item.getAttribute("id")) {
+            const quattityInput = document.querySelector(
+                ".basket-list-quattity-section > input"
+            );
+            quattityInput.value++;
+            return;
+        }
+    }
+    const basketBox = document.querySelector(".basket-box");
+    // create elements
+    const basketList = document.createElement("ul");    
+    const basketListItem = document.createElement("li");
+    const basketListImgSection = document.createElement("div");
+    const basketListPriceSection = document.createElement("div");
+    const basketListQuattitySection = document.createElement("div");
+    const image = document.createElement("img");
+    const title = document.createElement("h4");
+    const price = document.createElement("span");
+    const quattity = document.createElement("input");
+    const removeBtn = document.createElement("button");
+    removeBtn.addEventListener("click", (event) => removeProductFromCart(event, product));
+    // setting value
+    basketList.classList.add("basket-list");
+    basketListItem.classList.add("basket-list-item");
+    basketListImgSection.classList.add(
+        "basket-list-item-section",
+        "basket-list-img-section"
+    );
+    basketListPriceSection.classList.add(
+        "basket-list-item-section",
+        "basket-list-price-section" 
+    );
+    basketListQuattitySection.classList.add(
+        "basket-list-item-section",
+        "basket-list-quattity-section"
+    );
 
+    image.src = product.image;
+    title.innerText = product.title;
+    price.innerText = `${product.price}`;
+    quattity.type = "number";
+    quattity.value = 1;
+    quattity.min = 1;
+    removeBtn.innerText = "REMOVE";
 
-//     // adding value elements
-//     imageProduct.parentElement(".box > img");
-// }
+    // appending values
+    basketListImgSection.append(image, title);
+    basketListPriceSection.append(price);
+    basketListQuattitySection.append(quattity, removeBtn);
+    basketListItem.setAttribute("id", product.id);
+    basketListItem.append(
+        basketListImgSection,
+        basketListPriceSection,
+        basketListQuattitySection
+    );
+    basketList.append(basketListItem);
+    basketBox.append(basketList);
+}
+renderProducts();

@@ -1,0 +1,62 @@
+[
+    {
+        "id": "1",
+        "title": "Testy coffee Stimy",
+        "price": "25$",
+        "image": "img/p1.png"
+    },
+    {
+        "id": "2",
+        "title": "Americano pure grades",
+        "price": "29$",
+        "image": "img/p2.png"
+    },
+    {
+        "id": "3",
+        "title": "Indian roastingpack",
+        "price": "30$",
+        "image": "img/p3.png"
+    },
+    {
+        "id": "4",
+        "title": "Bangladeshi organic grades",
+        "price": "37$",
+        "image": "img/p4.png"
+    },
+    {
+        "id": "5",
+        "title": "Americano pure grades",
+        "price": "40$",
+        "image": "img/p5.png"
+    },
+    {
+        "id": "6",
+        "title": "Arvica coffee pack",
+        "price": "32$",
+        "image": "img/p6.png"
+    },
+    {
+        "id": "7",
+        "title": "Bangladeshi organic grades",
+        "price": "50$",
+        "image": "img/p4.png"
+    },
+    {
+        "id": "8",
+        "title": "Testy coffee Stimy",
+        "price": "47$",
+        "image": "img/p1.png"
+    },
+    {
+        "id": "9",
+        "title": "Arvica coffee pack",
+        "price": "24$",
+        "image": "img/p6.png"
+    },
+    {
+        "id": "10",
+        "title": "Indian roastingpack",
+        "price": "31$",
+        "image": "img/p3.png"
+    }
+]

@@ -131,6 +131,7 @@ section {
 /* Basket CSS */
 
 .basket-box {
+    display: none;
     position: absolute;
     border-radius: 0.3em;
     top: -400%;
@@ -142,6 +143,7 @@ section {
 }
 
 .basket-box.active {  
+    display: block;
     top: 110%;
     padding: 5px;
     box-shadow: var(--box-shadow);
@@ -169,7 +171,7 @@ section {
 .basket-list-img-section,
 .basket-list-price-section,
 .basket-list-quattity-section {
-    width: 23%;
+    width: 25%;
 }
 
 .basket-list-img-section img {
@@ -359,7 +361,8 @@ section {
     color: var(--bg-color);
 }
 
-.content-box a {
+.content-box button {
+    cursor: pointer;
     text-transform: uppercase;
     padding: 0 1rem;
     border: 2px solid var(--main-color);
@@ -368,7 +371,7 @@ section {
     font-weight: 500;
 }
 
-.content-box a:hover {
+.content-box button:hover {
     background: var(--main-color);
     color: var(--bg-color);
     transition: 0.2s all linear;
